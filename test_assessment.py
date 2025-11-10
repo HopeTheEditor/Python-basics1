@@ -82,7 +82,7 @@ class TestTask5(unittest.TestCase):
     """Test cases for Task 5: Analyze Feedback Text"""
 
     def test_with_punctuation_and_space(self):
-        self.assertEqual(analyze_feedback_text("Great course!"), {'vowels': 4, 'consonants': 6})
+        self.assertEqual(analyze_feedback_text("Great course!"), {'vowels': 5, 'consonants': 6})
 
     def test_with_numbers_and_mixed_case(self):
         self.assertEqual(analyze_feedback_text("Module 3 was fun."), {'vowels': 5, 'consonants': 7})
@@ -91,7 +91,7 @@ class TestTask5(unittest.TestCase):
         self.assertEqual(analyze_feedback_text(""), {'vowels': 0, 'consonants': 0})
 
     def test_no_vowels(self):
-        self.assertEqual(analyze_feedback_text("Rhythm fly gyps!"), {'vowels': 0, 'consonants': 11})
+        self.assertEqual(analyze_feedback_text("Rhythm fly gyps!"), {'vowels': 0, 'consonants': 13})
 
     def test_no_consonants(self):
         self.assertEqual(analyze_feedback_text("AeIoUaeiou"), {'vowels': 10, 'consonants': 0})
