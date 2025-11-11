@@ -6,7 +6,8 @@ def create_profile_greeting(first_name, last_name):
     
     Example: create_profile_greeting("John", "Doe") should return "Welcome, Doe, John!"
     """
-    pass
+    return f"Welcome, {last_name}, {first_name}!"
+    
 
 
 def calculate_total_score(scores):
@@ -20,6 +21,7 @@ def calculate_total_score(scores):
     Example: calculate_total_score([-3, -1, -12]) should return 0
     """
     pass
+        
 
 
 def analyze_score_status(score):
@@ -36,7 +38,14 @@ def analyze_score_status(score):
     Example: analyze_score_status(-15) should return "Negative Score"
     Example: analyze_score_status(0) should return "Zero"
     """
-    pass
+    if score % 2 == 0 and score > 0:
+        return "High and Even"
+    elif score % 2 != 0 and score > 0:
+        return "High and Odd"
+    elif score < 0 :
+        return "Negative Score"
+    elif score == 0:
+        return "Zero"
 
 
 def generate_study_reminders(start_day, end_day, interval):
@@ -63,4 +72,23 @@ def analyze_feedback_text(feedback):
     Example: analyze_feedback_text("Great course!") should return {'vowels': 4, 'consonants': 6}
     Example: analyze_feedback_text("Module 3 was fun.") should return {'vowels': 5, 'consonants': 7}
     """
-    pass
+    
+   
+    consonants = 0
+    vowels = 0
+    if "AeIoUaeiou" in feedback:
+        vowels += 1
+    elif "bcdfghjklmnpqrstvwxyz" in feedback:
+        consonants += 1
+    elif " " in feedback:
+        vowels +=1
+    else:
+        return vowels,consonants
+
+        
+         
+
+
+
+
+
